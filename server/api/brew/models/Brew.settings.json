@@ -2,7 +2,7 @@
   "connection": "default",
   "collectionName": "",
   "info": {
-    "name": "brand",
+    "name": "brew",
     "description": ""
   },
   "options": {
@@ -10,19 +10,22 @@
   },
   "attributes": {
     "name": {
-      "type": "string"
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
     },
     "image": {
       "model": "file",
       "via": "related",
       "plugin": "upload"
     },
-    "description": {
-      "type": "text"
+    "price": {
+      "type": "decimal"
     },
-    "brews": {
-      "collection": "brew",
-      "via": "brand"
+    "brand": {
+      "model": "brand",
+      "via": "brews"
     }
   }
 }
